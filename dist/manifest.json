@@ -1,0 +1,23 @@
+{
+  "name": "Cloutception",
+  "description": "Updates user ",
+  "version": "0.5.0",
+  "manifest_version": 3,
+  "content_scripts": [
+    {
+      "matches": ["https://*.bitclout.com/*"],
+      "js": ["index.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["storage", "activeTab", "scripting", "webNavigation", "tabs"],
+  "icons": {
+    "16": "/Cloutception-16.png",
+    "32": "/Cloutception-32.png",
+    "48": "/Cloutception-48.png",
+    "128": "/Cloutception-128.png"
+  }
+}

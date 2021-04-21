@@ -1,0 +1,34 @@
+{
+  "name": "cloutception",
+  "version": "0.2.0",
+  "description": "Cloutception extension, tools for analyzing creator data",
+  "scripts": {
+    "build": "webpack --config webpack.prod.js",
+    "dev": "webpack --config webpack.dev.js",
+    "watch": "webpack -w --config webpack.dev.js"
+  },
+  "author": "Romeo Copaciu",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chrome": "^0.0.60",
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.3",
+    "css-loader": "^3.4.2",
+    "node-sass": "^4.13.1",
+    "postcss": "^8.2.10",
+    "postcss-loader": "^5.2.0",
+    "postcss-preset-env": "^6.7.0",
+    "sass-loader": "^6.0.7",
+    "style-loader": "^0.20.3",
+    "ts-loader": "^9.1.1",
+    "typescript": "^4.2.4",
+    "webpack": "^5.34.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-merge": "^4.2.2"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
