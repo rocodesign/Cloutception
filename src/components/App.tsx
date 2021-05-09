@@ -38,8 +38,6 @@ const App = () => {
   async function handleUrlChange(pathname, _search) {
     setRouteName('')
 
-    console.warn('url changed', pathname)
-
     await wait(50)
     dispatch(setSelectedTab(-1))
 
@@ -66,10 +64,14 @@ const App = () => {
     dispatch(setBCPrice(price))
   }
 
+  async function handleUserChange(key) {
+    dispatch(setUserKey(key))
+  }
+
   useEffect(() => {
     watchUrl(handleUrlChange)
     watchWalletData(handleWalletDataChange)
-    watchCurrentUser(() => {})
+    watchCurrentUser(handleUserChange)
   }, [])
 
   return (

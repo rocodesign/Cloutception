@@ -26,7 +26,6 @@ const Content = () => {
       style={{
         left: 0,
         right: 0,
-        position: 'absolute',
         zIndex: 1
       }}
     >

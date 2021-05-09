@@ -30,8 +30,15 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
 })
 
 const handleHistoryEvent = (
-  event: chrome.webNavigation.WebNavigationFramedCallbackDetails
+  event: chrome.webNavigation.WebNavigationTransitionCallbackDetails
 ) => {
+  if (
+    ((event as unknown) as chrome.webNavigation.WebNavigationParentedCallbackDetails)
+      .parentFrameId !== -1
+  ) {
+    return
+  }
+
   chrome.tabs.sendMessage(event.tabId, {
     type: NAVIGATION_EVENT,
     detail: event.url
